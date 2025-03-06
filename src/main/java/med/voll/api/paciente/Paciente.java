@@ -46,4 +46,5 @@ public class Paciente {
             this.endereco.atualizarInformacoes(dados.endereco());
         }
     }
+    
 }
