@@ -1,4 +1,4 @@
-package med.voll.api.Infra;
+package med.voll.api.Infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
@@ -6,9 +6,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.http.HttpStatus;
-
-import java.lang.reflect.Field;
 
 @RestControllerAdvice
 public class TratadorDeErros {
