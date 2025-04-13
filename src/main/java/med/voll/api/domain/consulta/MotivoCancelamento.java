@@ -1,4 +1,8 @@
 package med.voll.api.domain.consulta;
 
-public class MotivoCancelamento {
+public enum MotivoCancelamento {
+
+    PACIENTE_DESISTIU,
+    MEDICO_CANCELOU,
+    OUTROS;
 }

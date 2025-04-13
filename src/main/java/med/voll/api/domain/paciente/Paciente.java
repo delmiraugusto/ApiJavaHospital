@@ -1,6 +1,5 @@
 package med.voll.api.domain.paciente;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -23,6 +22,7 @@ public class Paciente {
     private String email;
     private String cpf;
     private String telefone;
+
 
     @Embedded
     private Endereco endereco;
