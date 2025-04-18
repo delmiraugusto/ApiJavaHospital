@@ -26,9 +26,6 @@ public class SecurityFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        //o cabecalho esta associado com o request
-        System.out.println("Logado22323131");
-
         var tokenJWT = recuperarToken(request);
         if(tokenJWT != null) {
             var subject = tokenService.getSubject(tokenJWT);
@@ -37,8 +34,6 @@ public class SecurityFilter extends OncePerRequestFilter {
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            System.out.println("Logado");
-
         }
 
         // Necessario para chamar os próximos filtros na aplicação
